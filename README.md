@@ -1,20 +1,21 @@
-# hxSerial
+# hxserial
 
-[![TravisCI Build Status](https://travis-ci.org/andyli/hxSerial.svg?branch=master)](https://travis-ci.org/andyli/hxSerial)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/andyli/hxSerial?branch=master&svg=true)](https://ci.appveyor.com/project/andyli/hxSerial)
-
-**hxSerial** is a library for serial communication in [Haxe](http://haxe.org) (C++/Neko target). It is based on ofSerial in [OpenFrameworks](http://www.openframeworks.cc/).
+**hxserial** is a library for serial communication in [Haxe](http://haxe.org) (C++/Neko target). It is based on ofSerial in [OpenFrameworks](http://www.openframeworks.cc/).
+## this fork changes the library to an all lowercase name to fix the library not loading on haxe 4 and recent haxelib
 
 ## Download and Install
 
-The most easy and proper way is from haxelib:
+You can download/checkout the source from [the github repo](http://github.com/werkplaatsenpabobreda/hxserial).  
 
+Rebuild the library with 
+``` 
+lime rebuild ./ platform
 ```
-haxelib install hxSerial
-```
+(substitute `platform` with the name of your platform)
 
-Or you can download/checkout the source from [the github repo](http://github.com/andyli/hxSerial).
 
+
+The original library by Andy Li can be found at [http://github.com/andyli/hxSerial](http://github.com/andyli/hxSerial).
 ## How to use
 
 Create a `Serial` object, given its device name and speed (in bits per second, ie.baud):
@@ -40,6 +41,11 @@ For writing, `writeByte()` returns `true` if the operation is successful. `write
 For reading, you first check the number of bytes arrived by calling `available()`. If the amount of bytes you needed is enough, call `readByte()` to get a single byte as `Int` or call `readBytes()` to get multiple bytes as `String`.
 
 ## change log
+
+
+### version 0.1.3
+
+Changes libraryname to an all lowercase to fix library not loading.
 
 ### version 0.1.2
 
