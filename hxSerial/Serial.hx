@@ -18,7 +18,7 @@ class Serial {
 		if (!isInit)
 		{
 			isInit = true;
-			var initNeko = Lib.loadLazy("hxSerial","neko_init",5);
+			var initNeko = Lib.loadLazy("hxserial","neko_init",5);
 			if (initNeko != null) 
 				initNeko(
 					function(s) return new String(s),
@@ -26,7 +26,7 @@ class Serial {
 					null, true, false
 				);
 			else
-				trace("Could not init neko api for hxSerial");
+				trace("Could not init neko api for hxserial");
 		}
 	}
 
@@ -88,13 +88,13 @@ class Serial {
 	private var handle:Null<Int>;
 	private static var isInit = #if neko false #else true #end ;
 
-	private static var _enumerateDevices = Lib.load("hxSerial","enumerateDevices",0);
-	private static var _setup = Lib.load("hxSerial","setup",2);
-	private static var _writeBytes = Lib.load("hxSerial","writeBytes",3);
-	private static var _readBytes = Lib.load("hxSerial","readBytes",2);
-	private static var _writeByte = Lib.load("hxSerial","writeByte",2);
-	private static var _readByte = Lib.load("hxSerial","readByte",1);
-	private static var _flush = Lib.load("hxSerial","flush",3);
-	private static var _available = Lib.load("hxSerial","available",1);
-	private static var _breakdown = Lib.load("hxSerial","breakdown",1);
+	private static var _enumerateDevices = Lib.load("hxserial","enumerateDevices",0);
+	private static var _setup = Lib.load("hxserial","setup",2);
+	private static var _writeBytes = Lib.load("hxserial","writeBytes",3);
+	private static var _readBytes = Lib.load("hxserial","readBytes",2);
+	private static var _writeByte = Lib.load("hxserial","writeByte",2);
+	private static var _readByte = Lib.load("hxserial","readByte",1);
+	private static var _flush = Lib.load("hxserial","flush",3);
+	private static var _available = Lib.load("hxserial","available",1);
+	private static var _breakdown = Lib.load("hxserial","breakdown",1);
 }
